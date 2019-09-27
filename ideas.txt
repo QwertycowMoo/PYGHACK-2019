@@ -12,5 +12,6 @@ Food
 Cooking
 Furniture - get a set area, add your furniture and then arrange 
 Art
+Design
 
 
