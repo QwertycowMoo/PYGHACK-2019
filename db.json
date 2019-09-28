@@ -110,5 +110,18 @@
             "longitude": 16.5504575,
             "description": "ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus"
         }
+    ],
+    "proposals": [
+        {
+            "name": "La la land",
+            "category": "free",
+            "tags": [
+                "free",
+                "music"
+            ],
+            "daterange": "2019-09-28T15:57:38.076Z/2019-09-28T15:57:38.076Z",
+            "author": "georgepantazes@gmail.com",
+            "description": "Chocolate tasting and confetti throwing."
+        }
     ]
 }
