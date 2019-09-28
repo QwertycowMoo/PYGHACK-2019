@@ -1,32 +1,32 @@
 import axios from 'axios'
 
 const allProposals = () => axios
-    .get('/proposals')
+    .get('/api/proposals')
     .then(response => response.data)
     .catch(error => console.error(error))
 
 const getProposal = id => axios
-    .get(`/proposals/${id}`)
+    .get(`/api/proposals/${id}`)
     .then(response => response.data)
     .catch(error => console.error(error))
 
 const createProposal = proposal => axios
-    .get('/proposals', proposal)
+    .get('/api/proposals', proposal)
     .then(response => response.data)
     .catch(error => console.error(error))
 
 const updateProposal = proposal => axios
-    .put(`/proposals/${proposal.id}`, proposal)
+    .put(`/api/proposals/${proposal.id}`, proposal)
     .then(response => response.data)
     .catch(error => console.error(error))
 
 const upvoteProposal = proposal => axios
-    .patch(`/proposals/${proposal.id}`)
+    .patch(`/api/proposals/${proposal.id}`)
     .then(response => response.data)
     .catch(error => console.error(error))
 
 const deleteProposal = proposal => axios
-    .delete(`/proposals/${proposal.id}`)
+    .delete(`/api/proposals/${proposal.id}`)
     .then(response => response.data)
     .catch(error => console.error(error))
 

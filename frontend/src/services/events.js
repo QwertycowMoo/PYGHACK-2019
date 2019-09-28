@@ -1,27 +1,27 @@
 import axios from 'axios'
 
 const allEvents = () => axios
-    .get("/events")
+    .get("/api/events")
     .then(response => response.data)
     .catch(error => console.error(error))
 
 const getEvent = id => axios
-    .get(`/events/${id}`)
+    .get(`/api/events/${id}`)
     .then(response => response.data)
     .catch(error => console.error(error))
 
 const createEvent = event => axios
-    .post(`/events`, event)
-    .then(response = response.data)
+    .post(`/api/events`, event)
+    .then(response => response.data)
     .catch(error => console.error(error))
 
 const updateEvent = event => axios
-    .put(`/events/${event.id}`, event)
+    .put(`/api/events/${event.id}`, event)
     .then(response => response.data)
     .catch(error => console.error(error))
 
 const deleteEvent = (event) => axios
-    .delete(`/events/${event.id}`)
+    .delete(`/api/events/${event.id}`)
     .then(response => response.data)
     .catch(error => console.error(error))
 
