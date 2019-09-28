@@ -5,12 +5,17 @@ const allEvents = () => axios
     .then(response => response.data)
     .catch(error => console.error(error))
 
-const getEvent = (id) => axios
+const getEvent = id => axios
     .get(`/events/${id}`)
     .then(response => response.data)
     .catch(error => console.error(error))
 
-const updateEvent = (event) => axios
+const createEvent = event => axios
+    .post(`/events`, event)
+    .then(response = response.data)
+    .catch(error => console.error(error))
+
+const updateEvent = event => axios
     .put(`/events/${event.id}`, event)
     .then(response => response.data)
     .catch(error => console.error(error))
@@ -20,4 +25,4 @@ const deleteEvent = (event) => axios
     .then(response => response.data)
     .catch(error => console.error(error))
 
-export default { allEvents, getEvent, updateEvent, deleteEvent }
+export default { allEvents, getEvent, createEvent, updateEvent, deleteEvent }
