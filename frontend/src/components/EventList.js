@@ -14,7 +14,7 @@ class EventList extends React.Component {
         return <div id="events">
             <h2>Events</h2>
             <ul>
-                {this.state.events.map(event => <Event event={event} />)}
+            {this.state.events.map(event => <Event event={event}/>)}
             </ul>
         </div>
     }

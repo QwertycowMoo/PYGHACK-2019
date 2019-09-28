@@ -84,17 +84,19 @@ function App() {
   }
 
   return (
-    <>
+    
+    <div>
       <h1>Local Events App</h1>
       <SearchBar
         value={searchBarValue}
         handleChange={handleSearchBarChange}
         handleSubmit={handleSearchBarSubmit} />
 
-      <ProposalList events={searchEvents(searchTerm, proposals)} />
-      <VerticalBar />
-      <EventList events={searchEvents(searchTerm, events)} />
-    </>
+      <ProposalList events={events} />
+      <VerticalBar/>
+      <EventList events={events} />
+      </div>
+    
   );
 }
 

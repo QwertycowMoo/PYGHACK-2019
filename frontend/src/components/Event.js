@@ -5,6 +5,7 @@ const Event = ({ event }) => {
         border: '2px solid blue'
     }
 
+
     return <li key={event.id} style={style}>
     <div>
         <p>Name: {event.name}</p>
@@ -13,5 +14,6 @@ const Event = ({ event }) => {
     </div>
     </li >
 }
+
 
 export default Event
