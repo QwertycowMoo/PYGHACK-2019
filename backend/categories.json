@@ -1,5 +1,5 @@
-[
-    { "Arts": [
+{
+    "Arts": [
         "Comedy",
         "Drawings",
         "Impromptu",
@@ -110,5 +110,5 @@
         "Transport",
         "Other"
     ],
-    "Other"
+    "Other": []
 }
