@@ -1,0 +1,10 @@
+POST http://localhost:4000/api/events
+Content-Type: application/json
+
+{
+    "name": "TEST POST EVENT YAYYA",
+    "location": "My house",
+    "time": "12:00pm - 4:00pm",
+    "date": "September 28, 2019",
+    "description": ""
+}
