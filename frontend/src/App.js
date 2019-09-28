@@ -4,32 +4,15 @@ import FuzzySearch from 'fuzzy-search'
 import './App.css';
 
 import eventService from './services/events'
+import proposalService from './services/proposals'
 
 import SearchBar from './components/SearchBar'
-import ProposalList from './components/ProposalList'
+import RealEventList from './components/RealEventList'
 import VerticalBar from './components/VerticalBar'
-import EventList from './components/EventList'
+import RealProposalList from './components/RealProposalList'
 
-// ?Name of event (String)
-// Category (Drop down)
-// Tags (String[])
-// Month (Implicit year, Only in between now and a year from now)
-// Submittd by / Author (Pulled from user submission)
-// Description (String)
-const proposalsMockData = [
-  {
-    "id": 1,
-      "name": "La la land",
-      "category": "free",
-      "tags": [
-          "free",
-          "music"
-      ],
-      "daterange": "2019-09-28T15:57:38.076Z/2019-09-28T15:57:38.076Z",
-      "author": "georgepantazes@gmail.com",
-      "description": "Chocolate tasting and confetti throwing."
-  }
-]
+
+
 
 function App() {
   // const fullArray = useState([])
@@ -52,8 +35,10 @@ function App() {
     eventService.allEvents()
       .then(events => setEvents(events))
   }, [])
-
-  useEffect(() => setProposals(proposalsMockData), [])
+  useEffect(() => {
+    proposalService.allProposals()
+      .then(proposals => setProposals(proposals))
+  }, [])
 
   const handleSearchBarChange = (event) => {
     setSearchBarValue(event.target.value)
@@ -84,17 +69,19 @@ function App() {
   }
 
   return (
-    <>
+    
+    <div>
       <h1>Local Events App</h1>
       <SearchBar
         value={searchBarValue}
         handleChange={handleSearchBarChange}
         handleSubmit={handleSearchBarSubmit} />
 
-      <ProposalList events={searchEvents(searchTerm, proposals)} />
-      <VerticalBar />
-      <EventList events={searchEvents(searchTerm, events)} />
-    </>
+      <RealEventList events={events} />
+     <hr></hr>
+      <RealProposalList proposals={proposals} />
+      </div>
+    
   );
 }
 
