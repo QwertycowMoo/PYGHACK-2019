@@ -5,6 +5,7 @@ const Event = ({ event }) => {
     <div>
         <p>Name: {event.name}</p>
         <p>When: {event.time} {event.date}</p>
+        <p>Description: {event.description}</p>
     </div>
     </li >
 }

@@ -62,7 +62,7 @@ function App() {
 
   return (
     <div>
-      <h1 className="header">Local Events App</h1>
+      <h1 className="header"><strong><em>EventX</em></strong> - Local Events App</h1>
       <SearchBar
         value={searchBarValue}
         handleChange={handleSearchBarChange}
