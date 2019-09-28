@@ -1,12 +1,7 @@
 import React from 'react'
 
 const Event = ({ event }) => {
-    const style = {
-        border: '2px solid blue'
-    }
-
-
-    return <li key={event.id} style={style}>
+    return <li key={event.id}>
     <div>
         <p>Name: {event.name}</p>
         <p>Start Date: {event['start-date']}</p>

@@ -8,20 +8,12 @@ import proposalService from './services/proposals'
 
 import SearchBar from './components/SearchBar'
 import RealEventList from './components/RealEventList'
-import VerticalBar from './components/VerticalBar'
 import RealProposalList from './components/RealProposalList'
 
 
 
 
 function App() {
-  // const fullArray = useState([])
-  // if(fullArray.length === 2) { true )}
-  // evnts = fullArray[0]
-  // setEvents = fullArray[1]
-
-  // const [numTimesRendered, setNumTimesRendered] = useState(0)
-  // useEffect(() => { setNumTimesRendered(numTimesRendered++)}, numTimesRendered)
 
   const [events, setEvents] = useState([])
   console.log("Events", events)
@@ -51,7 +43,7 @@ function App() {
 
   const searchEvents = (searchTerm, events) => {
     console.log("Search term", searchTerm, "Events list", events)
-    
+
     if (!searchTerm) {
       console.log("Escaping search")
       return events
@@ -68,20 +60,26 @@ function App() {
     // return searcher.search(searchTerm || '');
   }
 
+  const headerStyle = {
+    backgroundColor: "light-yellow",
+    padding: "10px",
+    margin: "10px" 
+  }
+
   return (
-    
+
     <div>
-      <h1>Local Events App</h1>
+      <h1 className="header">Local Events App</h1>
       <SearchBar
         value={searchBarValue}
         handleChange={handleSearchBarChange}
         handleSubmit={handleSearchBarSubmit} />
 
-      <RealEventList events={events} />
-     <hr></hr>
       <RealProposalList proposals={proposals} />
-      </div>
-    
+      <hr></hr>
+      <RealEventList events={events} />
+    </div>
+
   );
 }
 
