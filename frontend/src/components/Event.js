@@ -4,8 +4,7 @@ const Event = ({ event }) => {
     return <li key={event.id}>
     <div>
         <p>Name: {event.name}</p>
-        <p>Start Date: {event['start-date']}</p>
-        <p>End Date: {}</p>
+        <p>When: {event.time} {event.date}</p>
     </div>
     </li >
 }
