@@ -5,4 +5,4 @@ const allProposals = () => axios
     .then(response => response.data)
     .catch(error => console.error(error))
 
-export default {}
+export default {allProposals}
