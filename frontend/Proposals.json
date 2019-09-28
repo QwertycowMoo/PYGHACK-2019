@@ -1,0 +1,28 @@
+{
+  "proposals": [
+    {
+      "name": "Watermelon Eatin' Contest"
+      "category": "Food, American"
+      "time": "September 2019"
+      "expiresBy": "December 2019"
+      "description": "We need to have a fall watermelon eating contest so that everyone can enjoy the nice weather before it gets cold."
+      "upvotes": 440
+    },
+    {
+      "name": "Hip Hop Flash Mob"
+      "category": "Dance, Hip-Hop"
+      "time": "November 2019"
+      "expiresBy": "July 2020"
+      "description": "Looking for a dance studio to pickup a small group of people to flash mob a hip hop dance in the middle of Urbana town center."
+      "upvotes": 30
+    },
+    {
+      "name": "MYGPALION"
+      "category": "Dance, Other"
+      "time": "September 2019"
+      "expiresBy": "November 2019"
+      "description": "We need a festival that showcases the dances of small communities in our C-U area. Any group can sign up and then people can learn and share dances from around the world"
+      "upvotes": 932
+    }
+  ]
+}
