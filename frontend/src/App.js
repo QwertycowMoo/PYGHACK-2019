@@ -11,12 +11,9 @@ import RealEventList from './components/RealEventList'
 import RealProposalList from './components/RealProposalList'
 
 
-
-
 function App() {
 
   const [events, setEvents] = useState([])
-  console.log("Events", events)
 
   const [proposals, setProposals] = useState([])
 
@@ -27,18 +24,19 @@ function App() {
     eventService.allEvents()
       .then(events => setEvents(events))
   }, [])
+
   useEffect(() => {
     proposalService.allProposals()
       .then(proposals => setProposals(proposals))
   }, [])
 
-  const handleSearchBarChange = (event) => {
+  const handleSearchBarChange = event => {
     setSearchBarValue(event.target.value)
+    setSearchTerm(event.target.value.toLowerCase())
   }
 
-  const handleSearchBarSubmit = (event) => {
+  const handleSearchBarSubmit = event => {
     event.preventDefault()
-    setSearchTerm(searchBarValue)
   }
 
   const searchEvents = (searchTerm, events) => {
@@ -49,7 +47,9 @@ function App() {
       return events
     }
 
-    const foundEvents = events.filter(event => event.name.includes(searchTerm || event.description.includes(searchTerm)))
+    const foundEvents = events.filter(event =>
+      event.name.toLowerCase().includes(searchTerm
+        || event.description.toLowerCase().includes(searchTerm)))
     console.log("Found events", foundEvents)
 
     return foundEvents
@@ -60,14 +60,7 @@ function App() {
     // return searcher.search(searchTerm || '');
   }
 
-  const headerStyle = {
-    backgroundColor: "light-yellow",
-    padding: "10px",
-    margin: "10px" 
-  }
-
   return (
-
     <div>
       <h1 className="header">Local Events App</h1>
       <SearchBar
@@ -75,12 +68,11 @@ function App() {
         handleChange={handleSearchBarChange}
         handleSubmit={handleSearchBarSubmit} />
 
-      <RealProposalList proposals={proposals} />
+      <RealProposalList proposals={searchEvents(searchTerm, proposals)} />
       <hr></hr>
-      <RealEventList events={events} />
+      <RealEventList events={searchEvents(searchTerm, events)} />
     </div>
-
-  );
+  )
 }
 
 export default App;
