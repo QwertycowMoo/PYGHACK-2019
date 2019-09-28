@@ -6,9 +6,9 @@ import './App.css';
 import eventService from './services/events'
 
 import SearchBar from './components/SearchBar'
-import ProposalList from './components/ProposalList'
+import RealEventList from './components/RealEventList'
 import VerticalBar from './components/VerticalBar'
-import EventList from './components/EventList'
+import RealProposalList from './components/RealProposalList'
 
 // ?Name of event (String)
 // Category (Drop down)
@@ -92,9 +92,9 @@ function App() {
         handleChange={handleSearchBarChange}
         handleSubmit={handleSearchBarSubmit} />
 
-      <ProposalList events={events} />
-      <VerticalBar/>
-      <EventList events={events} />
+      <RealEventList events={events} />
+     <hr></hr>
+      <RealProposalList proposals={proposals} />
       </div>
     
   );

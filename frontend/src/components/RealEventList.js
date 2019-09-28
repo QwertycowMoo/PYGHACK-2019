@@ -1,13 +1,13 @@
 import React from 'react'
 import Event from './Event'
 
-const ProposalList = ({ events }) => {
+const RealEventList = ({ events }) => {
     return <div>
-        <h2>Proposals</h2>
+        <h2>Events</h2>
         <ul>
             {events.map(event => <Event key={event.id} event={event} />)}
         </ul>
     </div>
 }
 
-export default ProposalList
+export default RealEventList
