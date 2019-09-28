@@ -25,6 +25,7 @@ app.get('/api/events/:id', (request, response) => {
     response.json(events.find(event => event.id === id))
 })
 
+// TODO ADD UPVOTES
 
 
 app.post('/api/events', (request, response) => {
