@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SearchBar = ({ value, handleChange, handleSubmit }) => {
-    return <form>
+    return <form id="searchbar">
         <input
             type="text"
             placeholder="Search.."
